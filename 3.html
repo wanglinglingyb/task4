@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转</title>
+    <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .box {
+            margin: 0 auto;
+            /* perspective: 1000px; */
+            transform-style: preserve-3d;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin-top: 200px;
+            animation: circle 10s  linear infinite;
+        }
+        @keyframes circle {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            100% {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+            .box2{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0px solid black;
+                font-size: 1.25rem;
+                color: white;
+                text-align: center;
+                line-height: 200px;
+                transition: transform .3s ease-in;
+                background: #d4d4d4;
+            }
+            .a{
+                background-color: rgba(128, 128, 128, 0.5);
+                background-size: auto 100%;
+                transform: translateZ(100px);
+            }
+            .b{
+                background-size: auto 100%;
+                transform: translateZ(-100px) rotateY(180deg);
+            }
+            .c{
+                background-size: auto 100%;
+                transform: rotateY(90deg) translateZ(100px);
+            }
+            .d{
+                background-size: auto 100%;
+                transform: rotateY(-90deg) translateZ(100px);
+            }
+            .e{
+                background-size: auto 100%;
+                transform: rotateX(90deg) translateZ(100px);
+            }
+            .f{
+                background-size: auto 100%;
+                transform: rotateX(-90deg) translateZ(100px);
+            }
+            .boxes {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -50px;
+                margin-left: -50px;
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+            }
+            .one {
+                background: red;
+                transform: rotateX(90deg) translateZ(50px);
+            }
+            .two {
+                background-color: purple;
+                transform: translateZ(50px);
+            }
+            .three {
+                background-color: yellow;
+                transform: rotateY(90deg) translateZ(50px);
+            }
+            .four {
+                background-color: orange;
+                transform: rotateY(180deg) translateZ(50px);
+            }
+            .five {
+                background-color: green;
+                transform: rotateY(-90deg) translateZ(50px);
+            }
+            .six {
+                background-color: blue;
+                transform: rotateX(-90deg) translateZ(50px) rotate(180deg);
+            }
+            .box .box1:hover .a{
+                background-color: rgba(128, 128, 128, 0.5);
+                background-size: auto 100%;
+                transform: translateZ(200px);
+            }
+            .box .box1:hover .b{
+                background-color: rgba(128, 128, 128, 0.5);
+                background-size: auto 100%;
+                transform: translateZ(-200px) rotateY(180deg);
+            }
+            .box .box1:hover .c{
+                background-color: rgba(128, 128, 128, 0.5);
+                background-size: auto 100%;
+                transform: rotateY(90deg) translateZ(200px);
+            }
+            .box .box1:hover .d{
+                background-color: rgba(128, 128, 128, 0.5);
+                background-size: auto 100%;
+                transform: rotateY(-90deg) translateZ(200px);
+            }
+            .box .box1:hover .e{
+                background-color: rgba(128, 128, 128, 0.5);
+                background-size: auto 100%;
+                transform: rotateX(90deg) translateZ(200px);
+            }
+            .box .box1:hover .f{
+                background-color: rgba(128, 128, 128, 0.5);
+                background-size: auto 100%;
+                transform: rotateX(-90deg) translateZ(200px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="box1">
+                <div class="a box2"></div>
+                <div class="b box2"></div>
+                <div class="c box2"></div>
+                <div class="d box2"></div>
+                <div class="e box2"></div>
+                <div class="f box2"></div>
+                <div class="one boxes"></div>
+                <div class="two boxes"></div>
+                <div class="three boxes"></div>
+                <div class="four boxes"></div>
+                <div class="five boxes"></div>
+                <div class="six boxes"></div>
+            </div>
+        </div>
+    </body>
+</html>
+
